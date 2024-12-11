@@ -554,7 +554,7 @@ uint8_t PICC_Select(spi_device_handle_t spi,	Uid *uid,			///< Pointer to Uid str
 	uint8_t bufferUsed;				// The number of bytes used in the buffer, ie the number of bytes to transfer to the FIFO.
 	uint8_t rxAlign;					// Used in BitFramingReg. Defines the bit position for the first bit received.
 	uint8_t txLastBits;				// Used in BitFramingReg. The number of valid bits in the last transmitted byte.
-	uint8_t *responseBuffer;
+	uint8_t *responseBuffer = NULL;
 	uint8_t responseLength;
 
 	// Description of buffer structure:
